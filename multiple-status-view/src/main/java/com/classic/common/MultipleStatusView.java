@@ -147,7 +147,8 @@ public class MultipleStatusView extends RelativeLayout {
                 emptyRetryView.setOnClickListener(mOnRetryClickListener);
             }
             mOtherIds.add(mEmptyView.getId());
-            addView(mEmptyView, empty_index, layoutParams);
+            //addView(mEmptyView, empty_index, layoutParams);
+            addView(mEmptyView, layoutParams);
         }
         showViewById(mEmptyView.getId());
     }
@@ -185,7 +186,8 @@ public class MultipleStatusView extends RelativeLayout {
                 errorRetryView.setOnClickListener(mOnRetryClickListener);
             }
             mOtherIds.add(mErrorView.getId());
-            addView(mErrorView, error_index, layoutParams);
+            //addView(mErrorView, error_index, layoutParams);
+            addView(mErrorView, layoutParams);
         }
         showViewById(mErrorView.getId());
     }
@@ -219,7 +221,8 @@ public class MultipleStatusView extends RelativeLayout {
         if (null == mLoadingView) {
             mLoadingView = view;
             mOtherIds.add(mLoadingView.getId());
-            addView(mLoadingView, loading_index, layoutParams);
+            // addView(mLoadingView, loading_index, layoutParams);
+            addView(mLoadingView, layoutParams);
         }
         showViewById(mLoadingView.getId());
     }
@@ -257,7 +260,8 @@ public class MultipleStatusView extends RelativeLayout {
                 noNetworkRetryView.setOnClickListener(mOnRetryClickListener);
             }
             mOtherIds.add(mNoNetworkView.getId());
-            addView(mNoNetworkView, network_index, layoutParams);
+            addView(mNoNetworkView, layoutParams);
+            //addView(mNoNetworkView, network_index, layoutParams);
         }
         showViewById(mNoNetworkView.getId());
     }
@@ -269,7 +273,8 @@ public class MultipleStatusView extends RelativeLayout {
         mViewStatus = STATUS_CONTENT;
         if (null == mContentView && mContentViewResId != NULL_RESOURCE_ID) {
             mContentView = mInflater.inflate(mContentViewResId, null);
-            addView(mContentView, content_index, DEFAULT_LAYOUT_PARAMS);
+            //addView(mContentView, content_index, DEFAULT_LAYOUT_PARAMS);
+            addView(mContentView, DEFAULT_LAYOUT_PARAMS);
         }
         showContentView();
     }
